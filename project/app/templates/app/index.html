@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <a href="{% url 'create', men.id %}"> + </a>
+    {% for men in people %}
+        <h1>{{ men.name }}</h1>
+        <p>{{ men.age }}</p>
+        <div>
+            <a href="{% url 'user', men.id %}"> + </a>
+            <a href="{% url 'update', men.id %}"> red </a>
+        </div>
+        <hr>
+    {% endfor %}
+</body>
+</html>
